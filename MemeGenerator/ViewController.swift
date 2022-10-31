@@ -81,8 +81,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             
             image.draw(at: CGPoint(x: 0, y: 0))
             
+            print(image.size.height - 80)
+            
             let attributedString = NSAttributedString(string: text, attributes: attrs)
-            attributedString.draw(with: CGRect(x: image.accessibilityFrame.midX, y: image.frame.height , width: image.size.width, height: 90), options: .usesLineFragmentOrigin, context: nil)
+            attributedString.draw(with: CGRect(x: image.accessibilityFrame.midX, y: image.size.height - 100, width: image.size.width, height: 90), options: .usesLineFragmentOrigin, context: nil)
         }
         
         imageView.image = meme
